@@ -10,7 +10,7 @@ RUN go install github.com/gobuffalo/packr/v2/packr2@latest
 WORKDIR /go/src/github.com/usefathom/fathom
 COPY . /go/src/github.com/usefathom/fathom
 COPY --from=assetbuilder /app/assets/build ./assets/build
-ARG GOARCH=amd64
+ARG GOARCH=arm64
 ARG GOOS=linux
 RUN make ARCH=${GOARCH} OS=${GOOS} docker
 
