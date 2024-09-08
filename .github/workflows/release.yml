@@ -24,9 +24,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build Docker image
-        run: docker build -t guiricha/chatgpt-web:latest .
+        run: docker build -t guiricha/fathom:latest .
       - name: Push Docker image
-        run: docker push guiricha/chatgpt-web:latest
+        run: docker push guiricha/fathom:latest
       # - name: Run GoReleaser
       #   uses: goreleaser/goreleaser-action@v3
       #   with:
